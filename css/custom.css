@@ -1,0 +1,440 @@
+/* defaults */
+
+::selection{
+    background-color: rgba(0,0,0,0.25);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: rgba(0,0,0,0.25);
+    color: white;
+}
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* custom.css */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    background-color: black;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+#top {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(0);
+    background-image: url('../assets/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    #top:after {
+        content: "";
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0)
+    }
+
+    #top > h1 {
+        width: 100%;
+        max-width: 1200px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 6vw;
+        font-weight: 300;
+        text-align: center;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+        #top > h1 > small {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+    article {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 4rem 0;
+        position: relative;
+        z-index: 1;
+        color: #222;
+        background-color: white;
+    }
+
+        article:first-of-type {
+            margin-top: 95vh;
+            box-shadow: 0px -1px 30px rgba(0, 0, 0, .5);
+        }
+
+        article:last-of-type {
+            box-shadow: 0px 1px 30px rgba(0, 0, 0, .5);
+        }
+
+    #introduction > h2 {
+        font-size: 2em;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    #introduction > p {
+        float: left;
+        width: 50%;
+        line-height: 1.4em;
+    }
+
+        #introduction > p:first-of-type {
+            padding-right: 2rem;
+        }
+
+        #introduction > p:last-of-type {
+            padding-left: 2rem;
+        }
+
+        #introduction > p > small {
+            display: block;
+            font-size: 1.2rem;
+            line-height: 1.8em;
+        }
+
+        #introduction > p > a {
+            font-size: 1.2rem;
+            color: #ccc;
+            transition: color 0.3s ease-in-out;
+        }
+
+            #introduction > p > a:hover {
+                color: black;
+            }
+
+    #swatches {
+        width: 100%;
+        padding-bottom: 4rem;
+    }
+
+        #swatches div a {
+            float: left;
+            width: 20%;
+            overflow: hidden;
+        }
+
+            #swatches div a img {
+                transform: translateZ(0);
+                transition: transform 0.3s cubic-bezier(0.05, 0, 0.1, 1);
+            }
+
+                #swatches div a:hover img {
+                    transform: scale(5);
+                }
+
+    #timelapse {
+        width: 100%;
+        padding: 0;
+    }
+
+        #timelapse:before {
+            content: "";
+            display: block;
+            padding-top: 56.25%;
+            position: relative;
+            z-index: 10;
+        }
+
+        #timelapse > iframe {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    .project {
+        padding-top: 4rem;
+    }
+
+        .project > .description {
+            float: left;
+            width: 50%;
+            padding-right: 2rem;
+        }
+
+            .project > .description > h1 {
+                margin-bottom: 0.7em;
+                font-weight: 300;
+                text-indent: -0.05em;
+            }
+
+            .project > .description > p {
+                margin-bottom: 1.4em;
+                line-height: 1.4em;
+            }
+
+                .project > .description > p > small {
+                    display: block;
+                    font-size: 1.2rem;
+                    line-height: 2.1em;
+                }
+
+        .project.vimeo > .description {
+            width: 100%;
+            padding-right: 0;
+        }
+
+            .project.vimeo > .description > p {
+                float: left;
+                width: 50%;
+            }
+
+            .project.vimeo > .description > p:first-of-type {
+                padding-right: 2rem;
+            }
+
+            .project.vimeo > .description > p:last-of-type {
+                padding-left: 2rem;
+            }
+
+        .project > .prototype {
+            float: left;
+            width: 50%;
+            padding-left: 2rem;
+        }
+
+            .project.vimeo > .prototype > .video {
+                width: 100%;
+                position: relative;
+            }
+
+                .project > .prototype > .video > video {
+                    max-width: 100%;
+                }
+
+        .project.vimeo > .prototype {
+            width: 100%;
+            padding-left: 0;
+        }
+
+            .project.vimeo > .prototype > .video {
+                width: 100%;
+                position: relative;
+            }
+
+                .project.vimeo > .prototype > .video:before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    padding-top: 56.25%;
+                }
+
+                .project.vimeo > .prototype > .video > iframe {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+    #credits {
+        padding-top: 4rem;
+        padding-bottom: 3.4rem;
+        margin-bottom: calc(100vh - 11rem);
+        z-index: 0;
+    }
+
+        #credits > div {
+            width: 100%;
+            position: relative;
+            /*max-width: 1000px;*/
+            /*margin: 0 auto;*/
+            /*padding: 0 2rem;*/
+        }
+
+            #credits > div > p {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                font-weight: 400;
+                vertical-align: top;
+            }
+
+                #credits > div > p:last-of-type {
+                    width: 43%;
+                }
+
+                #credits > div > p > small {
+                    display: block;
+                    font-size: 1.2rem;
+                    line-height: 2.1em;
+                }
+
+            #credits > div > a {
+                height: 1em;
+                position: absolute;
+                bottom: 0.5rem;
+                right: 0;
+            }
+
+                #credits > div > a > img {
+                    max-height: 100%;
+                }
+
+#bottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../assets/footer.jpg');
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    #bottom:before {
+        content: "";
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0)
+    }
+
+@media (orientation: portrait) {
+    #introduction > p {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+        #introduction > p:first-of-type {
+            margin-bottom: 1.4em;
+        }
+
+    .project > .description,
+    .project > .prototype,
+    .project.vimeo > .description > p {
+        width: 100%;
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    #top > h1 {
+        font-size: 9vw;
+    }
+
+    #introduction > h2,
+    .project > .description > h1 {
+        font-size: 1.5em;
+    }
+
+    article {
+        padding: 4rem 2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #top > h1 {
+        top: 2rem;
+        left: 2rem;
+        transform: none;
+        text-align: left;
+    }
+
+        #top > h1 > small {
+            font-size: 1.2rem;
+        }
+
+    #credits {
+        margin-bottom: calc(100vh - 18rem);
+    }
+
+        #credits > div > p {
+            width: 100%;
+        }
+
+        #credits > div > p:first-of-type {
+            margin-bottom: 1.4em;
+        }
+}
